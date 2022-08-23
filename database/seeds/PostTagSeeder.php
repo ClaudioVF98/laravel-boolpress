@@ -19,7 +19,7 @@ class PostTagSeeder extends Seeder
         $nTags = count($tags);
 
         foreach ($posts as $post) {
-            $postTags = $faker->randomElements($tags, rand(0, $nTags));
+            $postTags = $faker -> randomElements($tags, rand(0, $nTags));
             foreach ($postTags as $tagId) {
                 $post->tags()->attach($tagId);
             }
